@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace APP_Hospital.Models
 {
-    class Patient
+    public class Patient : IPerson, ISecurity
     {
         public int Patient_Id { get; set; }
         public string Name { get; set; }
-        public DateTime DateOfBirth { get; set; }
-        public int CardNumber { get; set; }
-
+        public string Email { get; set; }
+        public string Password { get; set; }
     }
 }

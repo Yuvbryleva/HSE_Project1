@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace APP_Hospital.Models
 {
-    class Appointment
+    public class Appointment
     {
-        public int Appointment_Id { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        public int App_Id { get; set; }
+        public DateTime App_Time { get; set; }
         public Patient App_Patient { get; set; }
-        public Doctor App_Doctor { get; set; }
-        public int MyProperty { get; set; }
+        public string Doctor { get; set; }
     }
 }
