@@ -10,5 +10,6 @@ namespace APP_Hospital
 
     class Repository
     {
+        int s;
     }
 }
