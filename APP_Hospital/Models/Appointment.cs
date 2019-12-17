@@ -10,7 +10,7 @@ namespace APP_Hospital.Models
     {
         public int App_Id { get; set; }
         public DateTime App_Time { get; set; }
-        public Patient App_Patient { get; set; }
+        public int Patient_Id { get; set; }
         public string Doctor { get; set; }
     }
 }

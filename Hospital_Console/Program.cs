@@ -17,6 +17,11 @@ namespace Hospital_Console
             {
                 Console.WriteLine(item.Name);
             }
+            foreach (Appointment item in hosp.appointments)
+            {
+                Console.WriteLine(item.Patient_Id);
+            }
+            
         }
     }
 }

@@ -17,9 +17,14 @@ namespace APP_Hospital
 
        public Hospital()
         {
+            
             LoadData();
+            
+            
         }
         private const string PatientsFileName = "..\\..\\..\\APP_Hospital\\Data\\Patients.json";
+        private const string AppFileName = "..\\..\\..\\APP_Hospital\\Data\\Appointments.json";
+        private const string DoctorsFileName = "..\\..\\..\\APP_Hospital\\Data\\Doctors.json";
         private T Deserialize<T>(string fileName)
         {
             using (var sr = new StreamReader(fileName))
@@ -31,10 +36,29 @@ namespace APP_Hospital
                 }
             }
         }
+        private void Serialize<T>(string fileName, T data)
+        {
+            using (var sw = new StreamWriter(fileName))
+            {
+                using (var jsonWriter = new JsonTextWriter(sw))
+                {
+                    var serializer = new JsonSerializer();
+                    serializer.Serialize(jsonWriter, data);
+                }
+            }
+        }
         private void LoadData()
         {
             patients = Deserialize<List<Patient>>(PatientsFileName);
+            appointments = Deserialize<List<Appointment>>(AppFileName);
+            //doctors = Deserialize<List<string>>(DoctorsFileName);
         }
 
+        public void SaveData()
+        {
+            Serialize(PatientsFileName, patients);
+            Serialize(AppFileName, appointments);
+            //Serialize(DoctorsFileName, doctors);
+        }
     }
 }
