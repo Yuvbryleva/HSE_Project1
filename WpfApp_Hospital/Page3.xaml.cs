@@ -24,5 +24,10 @@ namespace WpfApp_Hospital
         {
             InitializeComponent();
         }
+
+        private void OKClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
