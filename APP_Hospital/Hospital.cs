@@ -51,14 +51,14 @@ namespace APP_Hospital
         {
             patients = Deserialize<List<Patient>>(PatientsFileName);
             appointments = Deserialize<List<Appointment>>(AppFileName);
-            //doctors = Deserialize<List<string>>(DoctorsFileName);
+            doctors = Deserialize<List<string>>(DoctorsFileName);
         }
 
         public void SaveData()
         {
             Serialize(PatientsFileName, patients);
             Serialize(AppFileName, appointments);
-            //Serialize(DoctorsFileName, doctors);
+            Serialize(DoctorsFileName, doctors);
         }
     }
 }

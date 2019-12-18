@@ -20,10 +20,13 @@ namespace WpfApp_Hospital
     /// </summary>
     public partial class Page1 : Page
     {
-        public Page1()
+        APP_Hospital.Hospital hosp;
+        public Page1(ref APP_Hospital.Hospital hosp_)
         {
             InitializeComponent();
+            hosp = hosp_;
         }
+        
 
         private void AuthClick(object sender, RoutedEventArgs e)
         {

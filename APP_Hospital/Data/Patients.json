@@ -1,1 +1,4 @@
-[{"Patient_Id":1,"Name":"Alina","Email":"ghjkhg@mail.ru","Password":"101"}]
+[{"Patient_Id":1,"Name":"Alina","Email":"ghjkhg@gmail.com","Password":"101"},
+{"Patient_Id":2,"Name":"Daria","Email":"ddria@gmail.com","Password":"gggg"},
+{"Patient_Id":3,"Name":"Peter","Email":"peter@gmail.com","Password":"1f2g"},
+{"Patient_Id":4,"Name":"Fiona","Email":"flowers@gmail.com","Password":"www7"}]

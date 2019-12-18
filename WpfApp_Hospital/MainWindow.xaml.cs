@@ -20,9 +20,17 @@ namespace WpfApp_Hospital
     /// </summary>
     public partial class MainWindow : Window
     {
+        APP_Hospital.Hospital hosp = new APP_Hospital.Hospital();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            hosp = new APP_Hospital.Hospital();
+
+            frame.NavigationService.Navigate(new Page1());
         }
     }
 }

@@ -21,7 +21,11 @@ namespace Hospital_Console
             {
                 Console.WriteLine(item.Patient_Id);
             }
-            
+            foreach (string item in hosp.doctors)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadKey();
         }
     }
 }

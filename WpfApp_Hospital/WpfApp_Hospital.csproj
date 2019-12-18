@@ -127,10 +127,6 @@
       <Project>{1db12fa7-66f2-4213-80e0-c489893e522b}</Project>
       <Name>APP_Hospital</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Hospital_Console\Hospital_Console.csproj">
-      <Project>{8ac7c4a1-e524-45d5-a9ef-f80095596a11}</Project>
-      <Name>Hospital_Console</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
