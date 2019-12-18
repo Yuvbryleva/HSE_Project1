@@ -11,6 +11,7 @@ namespace APP_Hospital
 {
     public class Hospital
     {
+        public string CurrentUserLogin { get; set; }
         public List<Patient> patients = new List<Patient>();
         public List<Appointment> appointments = new List<Appointment>();
         public List<string> doctors = new List<string>();
@@ -59,6 +60,38 @@ namespace APP_Hospital
             Serialize(PatientsFileName, patients);
             Serialize(AppFileName, appointments);
             Serialize(DoctorsFileName, doctors);
+        }
+        public bool AddPatient(string name, string login, string password)
+        {
+            int id_ = 0;
+            foreach (Patient item in patients)
+            {
+                if (item.Patient_Id > id_)
+                {
+                    id_ = item.Patient_Id;
+                }
+                if (item.Email == login)
+                    return false;
+            }
+            Patient p1 = new Patient()
+            {
+                Patient_Id = id_ + 1,
+                Name = name,
+                Email = login,
+                Password = password
+            };
+            patients.Add(p1);
+            return true;
+        }
+        public bool CheckPassword(string login, string password)
+        {
+            foreach (Patient item in patients)
+            {
+                if (item.Email == login)
+                    if (item.Password == password)
+                        return true;
+            }
+            return false;
         }
     }
 }

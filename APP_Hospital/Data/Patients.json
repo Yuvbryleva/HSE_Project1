@@ -1,4 +1,1 @@
-[{"Patient_Id":1,"Name":"Alina","Email":"ghjkhg@gmail.com","Password":"101"},
-{"Patient_Id":2,"Name":"Daria","Email":"ddria@gmail.com","Password":"gggg"},
-{"Patient_Id":3,"Name":"Peter","Email":"peter@gmail.com","Password":"1f2g"},
-{"Patient_Id":4,"Name":"Fiona","Email":"flowers@gmail.com","Password":"www7"}]
+[{"Patient_Id":1,"Name":"Alina","Email":"ghjkhg@gmail.com","Password":"101"},{"Patient_Id":2,"Name":"Daria","Email":"ddria@gmail.com","Password":"gggg"},{"Patient_Id":3,"Name":"Peter","Email":"peter@gmail.com","Password":"1f2g"},{"Patient_Id":4,"Name":"Fiona","Email":"flowers@gmail.com","Password":"www7"},{"Patient_Id":5,"Name":"Yulia","Email":"njj@mail.ru","Password":"11"},{"Patient_Id":6,"Name":"Valya","Email":"snake","Password":"shhhhh"},{"Patient_Id":7,"Name":"Katya","Email":"k@mail.ru","Password":"12"}]

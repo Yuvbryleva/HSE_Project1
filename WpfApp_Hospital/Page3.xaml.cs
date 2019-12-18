@@ -20,14 +20,36 @@ namespace WpfApp_Hospital
     /// </summary>
     public partial class Page3 : Page
     {
-        public Page3()
+        APP_Hospital.Hospital hosp;
+        public Page3(ref APP_Hospital.Hospital hosp_)
         {
             InitializeComponent();
+            hosp = hosp_;
         }
 
         private void OKClick(object sender, RoutedEventArgs e)
         {
+            if (String.IsNullOrEmpty(TbLogin.Text))
+            {
+                MessageBox.Show("No Login entered!");
+                return;
+            }
+            if (String.IsNullOrEmpty(TbPassword.Text))
+            {
+                MessageBox.Show("No Password entered!");
+                return;
+            }
+            bool cp = hosp.CheckPassword(TbLogin.Text, TbPassword.Text);
+            if (cp == false)
+                MessageBox.Show("Login and/or password is not correct");
+            else
+                hosp.CurrentUserLogin = TbLogin.Text; 
+                this.NavigationService.Navigate(new Page4(ref hosp));
+        }
 
+        private void BacktoMenuClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Page1(ref hosp));
         }
     }
 }

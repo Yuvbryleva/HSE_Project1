@@ -16,21 +16,13 @@ using System.Windows.Shapes;
 namespace WpfApp_Hospital
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Page6.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Page6 : Page
     {
-        APP_Hospital.Hospital hosp = new APP_Hospital.Hospital();
-        public MainWindow()
+        public Page6()
         {
             InitializeComponent();
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-            hosp = new APP_Hospital.Hospital();
-
-            frame.NavigationService.Navigate(new Page1(ref hosp));
         }
     }
 }

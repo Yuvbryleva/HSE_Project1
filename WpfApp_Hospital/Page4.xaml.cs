@@ -20,9 +20,38 @@ namespace WpfApp_Hospital
     /// </summary>
     public partial class Page4 : Page
     {
-        public Page4()
+        APP_Hospital.Hospital hosp;
+        public Page4(ref APP_Hospital.Hospital hosp_)
         {
             InitializeComponent();
+            hosp = hosp_;
+        }
+        
+        
+
+        private void New_App_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void All_App_Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Page5(ref hosp));
+        }
+
+        private void Date_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Number_Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BacktoMenuClick(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Page1(ref hosp));
         }
     }
 }

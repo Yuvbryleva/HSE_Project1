@@ -5,19 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp_Hospital"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="419" d:DesignWidth="792"
       Title="Page2">
 
     <Grid>
         <Label Content="Registration" HorizontalAlignment="Left" Margin="312,34,0,0" VerticalAlignment="Top" FontSize="32"/>
         <Label Content="Name" HorizontalAlignment="Left" Margin="122,122,0,0" VerticalAlignment="Top" FontSize="32"/>
-        <Label Content="Login" HorizontalAlignment="Left" Margin="122,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.382,0.599" FontSize="32"/>
+        <Label Content="Login (email)" HorizontalAlignment="Left" Margin="122,196,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.382,0.599" FontSize="32"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="122,274,0,0" VerticalAlignment="Top" FontSize="32"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="363,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="32"/>
-        <TextBox HorizontalAlignment="Left" Height="38" Margin="363,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="32"/>
-        <TextBox HorizontalAlignment="Left" Height="36" Margin="363,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="32"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="363,135,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="32" Name="TbName"/>
+        <TextBox HorizontalAlignment="Left" Height="38" Margin="363,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="32" Name="TbLogin"/>
+        <TextBox HorizontalAlignment="Left" Height="36" Margin="363,291,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365" FontSize="32" Name="TbPassword"/>
         <Button Content="OK" HorizontalAlignment="Left" Margin="416,371,0,0" VerticalAlignment="Top" Width="114" Height="52" Click="OKClick" FontSize="24"/>
-        <Button Content="Back to menu" HorizontalAlignment="Left" Margin="581,371,0,0" VerticalAlignment="Top" Width="147" Height="50" FontSize="24"/>
+        <Button Content="Back to menu" HorizontalAlignment="Left" Margin="581,371,0,0" VerticalAlignment="Top" Width="147" Height="50" FontSize="24" Click="BacktoManuClick"/>
 
     </Grid>
 </Page>

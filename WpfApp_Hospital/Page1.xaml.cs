@@ -30,12 +30,12 @@ namespace WpfApp_Hospital
 
         private void AuthClick(object sender, RoutedEventArgs e)
         {
-
+             this.NavigationService.Navigate(new Page3(ref hosp));
         }
 
         private void RegClick(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Page2(ref hosp));
         }
     }
 }

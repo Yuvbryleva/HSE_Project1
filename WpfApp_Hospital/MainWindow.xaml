@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp_Hospital"
         mc:Ignorable="d"
-        Title="Hospital Application" Height="450" Width="800">
+        Title="Hospital Application" Height="540.196" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <Frame Name="frame" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792"/>
+        <Frame Name="frame" HorizontalAlignment="Left" Width="792"/>
 
     </Grid>
 </Window>
