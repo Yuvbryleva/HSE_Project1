@@ -41,10 +41,15 @@ namespace WpfApp_Hospital
             }
             bool cp = hosp.CheckPassword(TbLogin.Text, TbPassword.Text);
             if (cp == false)
+            {
                 MessageBox.Show("Login and/or password is not correct");
+                return;
+            }
             else
-                hosp.CurrentUserLogin = TbLogin.Text; 
+            {
+                hosp.CurrentUserLogin = TbLogin.Text;
                 this.NavigationService.Navigate(new Page4(ref hosp));
+            }
         }
 
         private void BacktoMenuClick(object sender, RoutedEventArgs e)

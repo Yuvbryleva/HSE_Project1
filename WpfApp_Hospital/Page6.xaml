@@ -5,13 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp_Hospital"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="419" d:DesignWidth="792"
       Title="Page6">
 
     <Grid>
         <ListBox Name="ListBoxDoctors" DisplayMemberPath="" HorizontalAlignment="Left" Height="305" Margin="0,107,0,0" VerticalAlignment="Top" Width="508"/>
-        <TextBox HorizontalAlignment="Left" Height="37" Margin="539,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237"/>
-        <Label Content="Please, enter date and time of your&#xD;&#xA;appointment (yyyy-mm-dd)" HorizontalAlignment="Left" FontSize="20" Margin="526,154,0,0" VerticalAlignment="Top" Width="274" Height="83"/>
+        <TextBox Name="TbDateTime" HorizontalAlignment="Left" FontSize="24"  Height="59" Margin="539,228,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="237"/>
+        <Label Content="Please, enter date and time &#xD;&#xA; of your appointment &#xD;&#xA; (yyyy-mm-dd hh:mm:ss)" FontSize="20" Margin="539,107,-21,0" VerticalAlignment="Top" Height="116" RenderTransformOrigin="0.304,0.254"/>
+        <Label Content="New Appointment" FontSize="32"  HorizontalAlignment="Left" Margin="238,0,0,0" VerticalAlignment="Top"/>
+        <Label Content="Please, choose doctor type:" FontSize="24"  HorizontalAlignment="Left" Margin="10,60,0,0" VerticalAlignment="Top"/>
+        <Button Content="OK" FontSize="20" HorizontalAlignment="Left" Margin="539,353,0,0" VerticalAlignment="Top" Width="94" Height="56" Click="OKClick"/>
+        <Button Content="Back" FontSize="20" HorizontalAlignment="Left" Margin="671,353,0,0" VerticalAlignment="Top" Width="105" Height="56" RenderTransformOrigin="1.005,0.294" Click="BackClick"/>
+
+
 
 
     </Grid>

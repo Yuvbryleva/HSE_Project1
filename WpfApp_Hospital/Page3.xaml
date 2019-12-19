@@ -12,7 +12,7 @@
         <Label Content="Authorization" HorizontalAlignment="Left" Margin="278,31,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label Content="Login" HorizontalAlignment="Left" Margin="127,145,0,0" VerticalAlignment="Top" FontSize="36"/>
         <Label Content="Password" HorizontalAlignment="Left" Margin="127,242,0,0" VerticalAlignment="Top" FontSize="32"/>
-        <TextBox Name="TbLogin" HorizontalAlignment="Left" Height="41" Margin="373,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="343" FontSize="32"/>
+        <TextBox Name="TbLogin" HorizontalAlignment="Left" Height="50" Margin="373,145,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="343" FontSize="32"/>
         <TextBox Name="TbPassword" HorizontalAlignment="Left" Height="53" Margin="373,242,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="343" FontSize="32"/>
         <Button Content="OK" HorizontalAlignment="Left" Margin="419,344,0,0" VerticalAlignment="Top" Width="114" Height="52" Click="OKClick" FontSize="24" RenderTransformOrigin="0.548,-0.178"/>
         <Button Content="Back to menu" HorizontalAlignment="Left" Margin="598,344,0,0" VerticalAlignment="Top" Width="147" Height="50" FontSize="24" Click="BacktoMenuClick"/>

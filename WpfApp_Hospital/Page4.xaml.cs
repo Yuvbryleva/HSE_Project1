@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using APP_Hospital.Models;
 
 namespace WpfApp_Hospital
 {
@@ -31,7 +32,7 @@ namespace WpfApp_Hospital
 
         private void New_App_Button_Click(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new Page6(ref hosp));
         }
 
         private void All_App_Button_Click(object sender, RoutedEventArgs e)
@@ -41,6 +42,13 @@ namespace WpfApp_Hospital
 
         private void Date_Button_Click(object sender, RoutedEventArgs e)
         {
+            //int currentPatientId = -1;
+            //foreach (Patient p in hosp.patients)
+            //{
+            //    if (p.Email == hosp.CurrentUserLogin)
+            //        currentPatientId = p.Patient_Id;
+            //} 
+
 
         }
 
@@ -51,6 +59,7 @@ namespace WpfApp_Hospital
 
         private void BacktoMenuClick(object sender, RoutedEventArgs e)
         {
+            hosp.CurrentUserLogin = null;
             this.NavigationService.Navigate(new Page1(ref hosp));
         }
     }

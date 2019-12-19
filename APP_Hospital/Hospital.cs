@@ -93,5 +93,36 @@ namespace APP_Hospital
             }
             return false;
         }
+        public bool AddAppointment(DateTime app_Time, string  currentLogin, string doctor)
+        {
+            int patient_Id = -1;
+            foreach (Patient p in patients)
+            {
+                if (p.Email == currentLogin)
+                    patient_Id = p.Patient_Id;
+            }
+            int id_ = 0;
+            foreach (Appointment item in appointments)
+            {
+                if (item.App_Id > id_)
+                {
+                    id_ = item.App_Id;
+                }
+                if (item.Doctor == doctor)
+                {
+                    if (item.App_Time == app_Time)
+                        return false;
+                }
+            }
+            Appointment app = new Appointment()
+            {
+                App_Id = id_ + 1,
+                App_Time = app_Time,
+                Patient_Id = patient_Id,
+                Doctor = doctor
+            };
+            appointments.Add(app);
+            return true;
+        }
     }
 }
