@@ -42,18 +42,14 @@ namespace WpfApp_Hospital
 
         private void Date_Button_Click(object sender, RoutedEventArgs e)
         {
-            //int currentPatientId = -1;
-            //foreach (Patient p in hosp.patients)
-            //{
-            //    if (p.Email == hosp.CurrentUserLogin)
-            //        currentPatientId = p.Patient_Id;
-            //} 
 
+            MessageBox.Show(hosp.GetMessage(0));
 
         }
 
         private void Number_Button_Click(object sender, RoutedEventArgs e)
         {
+            MessageBox.Show(hosp.GetMessage(1));
 
         }
 
