@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 
 namespace APP_Hospital
 {
+
     public class Hospital
     {
         public string CurrentUserLogin { get; set; }
@@ -125,8 +126,7 @@ namespace APP_Hospital
             return true;
         }
 
-        public delegate string Message(string currentLogin);
-
+        public delegate string Message(string currentLogin); // Пример использования делегата
 
         public string GetMessage(int MessageID)
         {
@@ -164,8 +164,9 @@ namespace APP_Hospital
                     }
                 }
             }
-            return "Next Appointment will be at " + String.Format("yyyy-mm-dd hh:mm:ss", test);
+            return "Next Appointment will be at " + test.ToString();
         }
+        //String.Format("yyyy-mm-dd hh:mm:ss", test)
         public string GetNumber(string currentLogin)
         {
             int patient_Id = -1;
@@ -182,7 +183,7 @@ namespace APP_Hospital
                     counter += 1;
                 }
             }
-            return "Total appointments: " + string.Format ("0",counter);
+            return "Total appointments: " + counter.ToString();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace APP_Hospital.Models
 {
-    public class Patient : IPerson, ISecurity
+    public class Patient : IPerson, ISecurity // Пример наследования интерфейсов
     {
         public int Patient_Id { get; set; }
         public string Name { get; set; }

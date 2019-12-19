@@ -18,7 +18,7 @@ namespace WpfApp_Hospital
     /// <summary>
     /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class Page1 : Page // Пример наследования классов
     {
         APP_Hospital.Hospital hosp;
         public Page1(ref APP_Hospital.Hospital hosp_)
