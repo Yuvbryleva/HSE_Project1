@@ -124,5 +124,65 @@ namespace APP_Hospital
             appointments.Add(app);
             return true;
         }
+
+        public delegate string Message(string currentLogin);
+
+
+        public string GetMessage(int MessageID)
+        {
+            Message msg;
+
+            if (MessageID == 0)
+            {
+                msg = GetDate;
+            }
+            else
+            {
+                msg = GetNumber;
+            }
+
+            return msg(CurrentUserLogin);
+        }
+
+        public string GetDate(string currentLogin)
+        {
+            int patient_Id = -1;
+            foreach (Patient p in patients)
+            {
+                if (p.Email == currentLogin)
+                    patient_Id = p.Patient_Id;
+            }
+            DateTime test = new DateTime(2050,01,01,00,00,00);
+            foreach (Appointment app in appointments)
+            {
+                if (app.Patient_Id == patient_Id)
+                {
+                    if (app.App_Time > DateTime.Now)
+                    {
+                        if (app.App_Time < test)
+                            test = app.App_Time;
+                    }
+                }
+            }
+            return "Next Appointment will be at " + String.Format("yyyy-mm-dd hh:mm:ss", test);
+        }
+        public string GetNumber(string currentLogin)
+        {
+            int patient_Id = -1;
+            foreach (Patient p in patients)
+            {
+                if (p.Email == currentLogin)
+                    patient_Id = p.Patient_Id;
+            }
+            int counter = 0;
+            foreach (Appointment app in appointments)
+            {
+                if (app.Patient_Id == patient_Id)
+                {
+                    counter += 1;
+                }
+            }
+            return "Total appointments: " + string.Format ("0",counter);
+        }
     }
 }
